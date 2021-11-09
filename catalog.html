@@ -3,14 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Каталог Техномарт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifect" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>HTML Academy: Каталог Техномарт</title>
 </head>
 
 <body class="page-body">
@@ -54,7 +53,7 @@
         </div>
       </div>
       <nav class="header-navigation">
-        <ul class="menu">
+        <ul class="menu-list">
           <li>
             <a class="menu-item" href="index.html">Главная</a>
           </li>
@@ -85,8 +84,8 @@
     <div class="container">
       <ul class="breadcrumps">
         <li>
-          <a class="breadcrumps-item" href="index.html">
-            <span>На главную</span>
+          <a class="breadcrumps-item breadcrumps-item-main" href="index.html">
+            <span class="visually-hidden">На главную</span>
           </a>
         </li>
         <li>
@@ -100,26 +99,26 @@
           </a>
         </li>
         <li>
-          <a class="breadcrumps-item current">
+          <a class="breadcrumps-item breadcrumps-item-current">
             Перфораторы
           </a>
         </li>
       </ul>
-      <h1>Перфораторы</h1>
+      <h1 class="page-title">Перфораторы</h1>
       <section class="filters">
-        <h2>Фильтр:</h2>
+        <h2 class="sub-title">Фильтр:</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Цена:</legend>
-            <div>регулировка цены</div>
-            <label for="filter-price-min">Минимальная цена</label>
+            <div>Регулировка цены</div>
+            <label class="visually-hidden" for="filter-price-min">Минимальная цена</label>
             <input class="filter-price-min" type="text" name="min-price" id="filter-price-min" placeholder="0">
-            <label for="filter-price-max">Максимальная цена</label>
+            <label class="visually-hidden" for="filter-price-max">Максимальная цена</label>
             <input class="filter-price-max" type="text" name="max-price" id="filter-price-max" placeholder="30000">
           </fieldset>
           <fieldset>
-            <legend>Производители</legend>
-            <ul>
+            <legend>Производители:</legend>
+            <ul class="manufacturers-list">
               <li>
                 <input class="filter-checkbox" type="checkbox" checked name="manufacturers[]" value="bosch" id="bosch">
                 <label for="interskol">Bosch</label>
@@ -144,8 +143,8 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Питание</legend>
-            <ul>
+            <legend>Питание:</legend>
+            <ul class="battery-list">
               <li>
                 <input class="filter-radio" type="radio" checked name="supply" id="battery">
                 <label for="battery">Аккумуляторные</label>
@@ -160,26 +159,26 @@
         </form>
       </section>
       <section class="catalog">
-        <h2>Каталог карточек</h2>
+        <h2 class="visually-hidden">Каталог карточек</h2>
         <div class="sorting">
-          <h3>Сортировка</h3>
+          <h3>Сортировка:</h3>
           <ul class="sorting-list">
             <li>
-              <a href="#">По цене</a>
+              <a class="sorting-item sorting-active" href="#">По цене</a>
             </li>
             <li>
-              <a href="#">По типу</a>
+              <a class="sorting-item" href="#">По типу</a>
             </li>
             <li>
-              <a href="#">По функционалу</a>
+              <a class="sorting-item" href="#">По функционалу</a>
             </li>
           </ul>
           <ul class="sorting-range-list">
             <li>
-              <a href="#"><span>По возрастанию</span></a>
+              <a href="#"><span class="visually-hidden">По возрастанию</span></a>
             </li>
             <li>
-              <a href="#"><span>По убыванию</span></a>
+              <a href="#"><span class="visually-hidden">По убыванию</span></a>
             </li>
           </ul>
         </div>
@@ -210,12 +209,13 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 6000</h3>
             </a>
             <img src="img/bosch-6000.jpg" width="144" height="128"
               alt="Аккумуляторный трехрежимный перфоратор с щёточным двигателем.">
+            <span class="new">New</span>
             <s class="old-price">30500 Р.</s>
             <p class="current-price">25500 Р.</p>
             <div>
@@ -223,11 +223,12 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 3000</h3>
             </a>
             <img src="img/bosch-3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <s class="old-price">22500 Р.</s>
             <p class="current-price">15500 Р.</p>
             <div>
@@ -248,22 +249,24 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 2000</h3>
             </a>
             <img src="img/bosch-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <p class="current-price">12500 Р.</p>
             <div>
               <a class="buy" href="#">Купить</a>
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 3000</h3>
             </a>
             <img src="img/bosch-3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <s class="old-price">22500 Р.</s>
             <p class="current-price">15500 Р.</p>
             <div>
@@ -284,11 +287,12 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 2000</h3>
             </a>
             <img src="img/bosch-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <p class="current-price">12500 Р.</p>
             <div>
               <a class="buy" href="#">Купить</a>
@@ -298,22 +302,23 @@
         </ul>
 
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">
-            <a href="#">1</a>
+          <li>
+            <a class="pagination-item pagination-item-current" href="#">1</a>
           </li>
-          <li class="pagination-item">
-            <a href="#">2</a>
+          <li>
+            <a class="pagination-item" href="#">2</a>
           </li>
-          <li class="pagination-item">
-            <a href="#">3</a>
+          <li>
+            <a class="pagination-item" href="#">3</a>
           </li>
-          <li class="pagination-item pagination-item-next">
-            <a href="#">Следущая</a>
+          <li>
+            <a class="pagination-item pagination-item-next" href="#">Следующая</a>
           </li>
         </ul>
       </section>
       <section class="note">
-        <h2>Пара слов о перфораторах</h2>
+        <div class="container">
+        <h2 class="headline">Пара слов о перфораторах</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
           кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
@@ -321,6 +326,7 @@
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
           ударная дрель.
         </p>
+        </div>
       </section>
     </div>
   </main>
@@ -333,7 +339,7 @@
             <img src="img/icons/logo-technomart.svg" width="220" height="68"
               alt="Буквенный логотип магазина Техномарт.">
           </a>
-          <ul class="footer-menu">
+          <ul class="footer-menu-list">
             <li>
               <a class="footer-menu-item" href="#">Компания</a>
             </li>
@@ -354,7 +360,7 @@
         <div class="footer-top-bottom">
           <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br><a class="footer-tel" href="tel:+78005558628">+7 800
               555-86-28</a></p>
-          <ul class="sub-menu">
+          <ul class="sub-menu-list">
             <li>
               <a class="sub-menu-item" href="#">Материалы</a>
             </li>
@@ -402,11 +408,11 @@
   </footer>
 
   <section class="modal modal-cart">
-    <h2>Добавлено в корзину</h2>
-    <p>Товар добавлен в корзину</p>
-    <button class="btn-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Добавлено в корзину</h2>
+    <p>Товар добавлен в корзину!</p>
+    <button class="button-close" type="button">Закрыть</button>
     <a class="button" href="#">Оформить заказ</a>
-    <button class="btn-continue" type="button">Продолжить покупки</button>
+    <button class="button-continue" type="button">Продолжить покупки</button>
   </section>
 
 </body>

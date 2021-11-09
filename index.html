@@ -3,15 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifect" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>HTML Academy: Техномарт</title>
 </head>
 
 <body class="page-body">
@@ -46,7 +44,7 @@
         </div>
       </div>
       <nav class="header-navigation">
-        <ul class="menu">
+        <ul class="menu-list">
           <li>
             <a class="menu-item">Главная</a>
           </li>
@@ -80,11 +78,12 @@
         <h2 class="visually-hidden">Ассортимент</h2>
         <div class="range-item materials">
           <h3>Материалы</h3>
-          <a href="#">На любой вкус</a>
+          <a href="#">на любой вкус</a>
+          <span class="new">New</span>
         </div>
         <div class="range-item tools">
           <h3>Инструмент</h3>
-          <a href="#">На все случаи</a>
+          <a href="#">на все случаи</a>
         </div>
         <div class="range-item tech">
           <h3>Техника</h3>
@@ -100,16 +99,18 @@
         </div>
         <!-- Слайдер -->
         <div class="gallery">
-          <div class="gallery-slider perforators">
+          <ul>
+          <li class="gallery-slider perforators">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
-            <a class="button" href="catalog.html">Смотреть каталог</a>
-          </div>
-          <div class="gallery-slider drills hidden">
+            <a class="button" href="catalog.html">Открыть каталог</a>
+          </li>
+          <li class="gallery-slider drills hidden">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
-            <a class="button" href="catalog.html">Смотреть каталог</a>
-          </div>
+            <a class="button" href="catalog.html">Открыть каталог</a>
+          </li>
+          </ul>
           <button class="button-back" type="button">
             <span>Назад</span>
           </button>
@@ -143,11 +144,12 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 3000</h3>
             </a>
             <img src="img/bosch-3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <s class="old-price">22500 Р.</s>
             <p class="current-price">15500 Р.</p>
             <div>
@@ -168,11 +170,12 @@
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
-          <li class="good-item new">
+          <li class="good-item">
             <a href="#">
               <h3>Перфоратор BOSCH BFG 2000</h3>
             </a>
             <img src="img/bosch-2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор с патроном SDS plus.">
+            <span class="new">New</span>
             <s class="old-price">22500 Р.</s>
             <p class="current-price">12500 Р.</p>
             <div>
@@ -184,7 +187,7 @@
       </section>
       <section class="brands">
         <h2 class="highlight-headline ">Популярные производители:</h2>
-        <a class="button" href="catalog.html">Все популярные производители</a>
+        <a class="button" href="catalog.html">Все производители</a>
         <ul class="brands-list">
           <li>
             <a class="brand-item" href="#">
@@ -235,7 +238,7 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="features-slider-buttons">
-          <button class="feature-button button-delivery" type="button">Доставка</button>
+          <button class="feature-button button-delivery feature-button-active" type="button">Доставка</button>
           <button class="feature-button button-guarantee" type="button">Гарантия</button>
           <button class="feature-button button-credit" type="button">Кредит</button>
         </div>
@@ -281,8 +284,8 @@
       <section class="contact">
         <h2 class="headline">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a>
-          <img src="img/map.png" width="300" height="158" alt="Карта с местонахождением офиса.">
+        <a href="#">
+          <img src="img/map.png" width="300" height="158" alt="Карта адресом: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П.">
         </a>
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -297,7 +300,7 @@
             <img src="img/icons/logo-technomart.svg" width="220" height="68"
               alt="Буквенный логотип магазина Техномарт.">
           </a>
-          <ul class="footer-menu">
+          <ul class="footer-menu-list">
             <li>
               <a class="footer-menu-item" href="#">Компания</a>
             </li>
@@ -318,7 +321,7 @@
         <div class="footer-top-bottom">
           <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br><a class="footer-tel" href="tel:+78005558628">+7 800
               555-86-28</a></p>
-          <ul class="sub-menu">
+          <ul class="sub-menu-list">
             <li>
               <a class="sub-menu-item" href="index.html">Материалы</a>
             </li>
@@ -370,27 +373,27 @@
     <form class="contact-form" action="https://echo.academy.ru" method="post">
       <label for="contact-name">Ваше имя:</label>
       <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
-      <label for="contact-email">Ваш email:</label>
+      <label for="contact-email">Ваш e-mail:</label>
       <input type="text" name="email" id="contact-email" placeholder="email@example.com">
       <label for="contact-comment">Текст письма:</label>
       <textarea name="comment" id="contact-comment" placeholder="В свободной форме"></textarea>
       <button class="button submit" type="submit">Отправить</button>
     </form>
-    <button class="btn-close" type="button">Закрыть</button>
+    <button class="button-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Местоположение офиса</h2>
-    <img src="img/map.png" width="300" height="158" alt="Карта с местонахождением офиса.">
-    <button class="btn-close" type="button">Закрыть</button>
+    <img src="img/map-large.png" width="943" height="449" alt="Карта с местонахождением офиса.">
+    <button class="button-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-cart">
     <h2 class="visually-hidden">Добавлено в корзину</h2>
     <p>Товар добавлен в корзину!</p>
-    <button class="btn-close" type="button">Закрыть</button>
+    <button class="button-close" type="button">Закрыть</button>
     <a class="button" href="#">Оформить заказ</a>
-    <button class="btn-continue" type="button">Продолжить покупки</button>
+    <button class="button-continue" type="button">Продолжить покупки</button>
   </section>
 </body>
 
