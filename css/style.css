@@ -146,7 +146,8 @@ img {
   height: 47px;
 }
 
-.header-logo:active {
+.header-logo[href]:active,
+.footer-logo[href]:active {
   background: var(--click-accent);
 }
 
@@ -156,28 +157,37 @@ img {
 }
 
 .user-links a,
-.search-field::placeholder {
+.search-field {
   font-size: 18px;
   line-height: 24px;
   color: var(--text-white);
 }
 
-.user-links a:focus .user-links a::before,
-.user-links a:hover .user-links a::before,
-.search-field:focus .search-field:before,
-.search-field:hover .search-field:before {
-  background: var(--text-white);
+.search-field::placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 .search-field:focus {
   outline: 0;
+  color: var(--text-black);
   background: var(--text-white);
 }
 
-.search-field:focus::placeholder {
-  color: var(--text-black);
+.search-field::-moz-placeholder { /* Firefox 19+ */
+  opacity: 1;
 }
 
+.search-field:-moz-placeholder { /* Firefox 18- */
+  opacity: 1;
+}
+
+.user-links a:focus::before,
+.user-links a:hover::before,
+.search-field:hover::before {
+  background: var(--text-white);
+}
 
 .bookmark:active,
 .cart:active {
@@ -214,9 +224,12 @@ img {
 }
 
 .header-phone:focus,
-.header-phone:hover,
-.header-phone:active {
+.header-phone:hover{
   color: var(--socials-color);
+}
+
+.header-phone:active {
+  color: var(--click-user);
 }
 
 .header-contacts p {
@@ -282,12 +295,12 @@ img {
   color: var(--text-white);
 }
 
-.menu-item:focus,
-.menu-item:hover {
+.menu-item[href]:focus,
+.menu-item[href]:hover {
   background: var(--bg-dark);
 }
 
-.menu-item:active {
+.menu-item[href]:active {
   opacity: 0.5;
 }
 
@@ -491,7 +504,7 @@ img {
 }
 
 .brand-item:active {
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 /* Features */
@@ -584,8 +597,8 @@ img {
   color: var(--text-light);
 }
 
-.footer-menu-item:focus,
-.footer-menu-item:hover,
+.footer-menu-item[href]:focus,
+.footer-menu-item[href]:hover,
 .sub-menu-item:focus,
 .sub-menu-item:hover,
 .copyright:focus,
@@ -593,7 +606,7 @@ img {
   text-decoration-line: underline;
 }
 
-.footer-menu-item:active,
+.footer-menu-item[href]:active,
 .sub-menu-item:active {
   text-decoration: none;
   opacity: 0.5;
@@ -664,8 +677,12 @@ img {
 
 /* CATALOG */
 
-.cart-active {
+.full-cart {
   background: var(--accent-color);
+}
+
+.added-bookmark {
+  background: var(--click-accent);
 }
 
 .breadcrumps {
@@ -775,13 +792,13 @@ img {
 
 .show:focus,
 .show:hover,
-.pagination-item:focus,
-.pagination-item:hover {
+.pagination-item[href]:focus,
+.pagination-item[href]:hover {
   border: 1px solid var(--click-user);
 }
 
 .show:active,
-.pagination-item:active {
+.pagination-item[href]:active {
   border: 1px solid var(--accent-color);
 }
 
