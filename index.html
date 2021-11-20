@@ -14,7 +14,7 @@
 
 <body class="page-body">
 
-  <header class="main-header">
+  <header class="main-header index-header">
     <div class="main-header-top">
       <div class="container">
         <a class="logo header-logo">
@@ -97,16 +97,16 @@
           <h3>Доставка</h3>
           <a href="#">Бесплатно</a>
         </div>
-        <!-- Слайдер -->
+
         <div class="gallery">
           <ul>
           <li class="gallery-slider perforators">
-            <h3>Перфораторы</h3>
+            <h3 class="gallery-slider-title">Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </li>
           <li class="gallery-slider drills hidden">
-            <h3>Дрели</h3>
+            <h3 class="gallery-slider-title">Дрели</h3>
             <p>Соседям на радость!</p>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </li>
@@ -237,36 +237,36 @@
         <h2 class="headline">Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="features-slider-buttons">
-          <button class="feature-button button-delivery feature-button-active" type="button">Доставка</button>
-          <button class="feature-button button-guarantee" type="button">Гарантия</button>
-          <button class="feature-button button-credit" type="button">Кредит</button>
+        <div class="features-wrapper">
+          <div class="features-slider-buttons">
+            <button class="feature-button button-delivery feature-button-active" type="button">Доставка</button>
+            <button class="feature-button button-guarantee" type="button">Гарантия</button>
+            <button class="feature-button button-credit" type="button">Кредит</button>
+          </div>
+          <ul class="features-slider-list">
+            <li class="feature-slide delivery hidden">
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!</p>
+            </li>
+            <li class="feature-slide guarantee hidden">
+              <h3>Гарантия</h3>
+              <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара,
+                спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии.
+                Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+            </li>
+            <li class="feature-slide credit">
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
+              <a class="button" href="#">Отправить заявку</a>
+            </li>
+          </ul>
         </div>
-        <ul class="features-slider-list">
-          <li class="feature-slide delivery">
-            <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!</p>
-          </li>
-          <li class="feature-slide guarantee">
-            <h3>Гарантия</h3>
-            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-              спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
-              Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-          </li>
-          <li class="feature-slide credit">
-            <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще!
-
-              Кредитные консультанты придут вам на помощь.</p>
-            <a class="button" href="#">Отправить заявку</a>
-          </li>
-        </ul>
       </div>
     </section>
-    <div class="container">
+    <div class="container index-columns">
       <section class="about-us">
         <h2 class="headline">Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь!
@@ -281,7 +281,7 @@
         </ul>
         <a class="button" href="#">Подробнее о компании</a>
       </section>
-      <section class="contact">
+      <section class="contacts">
         <h2 class="headline">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <a href="#">
@@ -293,9 +293,8 @@
   </main>
 
   <footer class="main-footer">
+    <div class="container">
     <div class="main-footer-top">
-      <div class="container">
-        <div class="footer-top-top">
           <a class="logo footer-logo">
             <img src="img/icons/logo-technomart.svg" width="220" height="68"
               alt="Буквенный логотип магазина Техномарт.">
@@ -317,9 +316,7 @@
               <a class="footer-menu-item" href="#">Контакты</a>
             </li>
           </ul>
-        </div>
-        <div class="footer-top-bottom">
-          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br><a class="footer-tel" href="tel:+78005558628">+7 800
+          <p class="footer-top-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br><a class="footer-tel" href="tel:+78005558628">+7 800
               555-86-28</a></p>
           <ul class="sub-menu-list">
             <li>
@@ -335,7 +332,6 @@
               <a class="sub-menu-item" href="#">Спецпредложения</a>
             </li>
           </ul>
-        </div>
       </div>
     </div>
     <div class="main-footer-bottom">
