@@ -246,6 +246,8 @@ img {
 
 .user-link{
   display: block;
+  box-sizing: border-box;
+  width: 150px;
   padding-top: 9px;
   padding-bottom: 9px;
   font-size: 18px;
@@ -255,8 +257,8 @@ img {
 
 .bookmark {
   position: relative;
-  padding-left: 43px;
-  padding-right: 24px;
+  padding-left: 40px;
+  padding-right: 23px;
 }
 
 .bookmark::before {
@@ -272,8 +274,8 @@ img {
 
 .cart {
   position: relative;
-  padding-left: 48px;
-  padding-right: 27px;
+  padding-left: 45px;
+  padding-right: 23px;
 }
 
 .cart::before {
@@ -322,15 +324,13 @@ img {
 
 .main-header-middle {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 41px;
 }
 
 .description {
   margin: 0;
   margin-top: -4px;
-  margin-left: 30px;
-  width: 197px;
+  padding-left: 30px;
   font-style: italic;
   font-size: 16px;
   line-height: 25px;
@@ -338,7 +338,8 @@ img {
 }
 
 .header-contacts {
-  margin-left: 17px;
+  margin-left: 92px;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -688,7 +689,6 @@ img {
 
 .gallery .button {
   margin-left: 24px;
-  padding: 11px 44px 11px 44px;
 }
 
 .perforators {
@@ -756,7 +756,7 @@ img {
   display: block;
   box-sizing: border-box;
   width: 192px;
-  height: 38px;
+  padding: 10px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -786,11 +786,13 @@ img {
   justify-content: space-between;
   background: var(--bg-extra-light);
   margin-bottom: 20px;
+  padding: 25px 14px 25px 30px;
 }
 
 .highlight-headline {
   margin: 0;
-  padding: 30px 28px;
+  margin-right: 10px;
+  align-self: center;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -800,8 +802,6 @@ img {
 
 .popular .button {
   align-self: center;
-  padding: 11px 24px;
-  margin-right: 14px;
 }
 
 .popular-goods-list {
@@ -901,7 +901,7 @@ img {
 .card-action-buttons {
   display: none;
   margin-top: 38px;
-  margin-bottom: 54px;
+  margin-bottom: 52px;
   order: -1;
 }
 
@@ -976,8 +976,6 @@ img {
 
 .brands .button {
   align-self: center;
-  padding: 10px 38px 11px;
-  margin-right: 14px;
 }
 
 .brands-list {
@@ -1120,10 +1118,6 @@ img {
   background: url("../img/service-credit.png") no-repeat 155px 0;
 }
 
-.features .button {
-  padding: 10px 23px;
-}
-
 /* About-us */
 .index-columns {
   display: flex;
@@ -1174,7 +1168,6 @@ img {
 
 .about-us .button {
   width: 220px;
-  padding: 10px 40px;
 }
 
 /* contacts */
@@ -1197,7 +1190,6 @@ img {
 
 .contacts .button {
   width: 300px;
-  padding: 10px 61px;
 }
 
 /* Footer */
@@ -1427,7 +1419,31 @@ img {
   background: var(--click-accent);
 }
 
+.user-box {
+  width: 299px;
+}
+
+.user-profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 17px 12px 15px;
+  font-size: 21px;
+  line-height: 21px;
+  background: var(--text-white);
+}
+
+.user-profile span {
+  margin-left: 15px;
+  color: var(--text-black);
+}
+
 .additional-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
   list-style: none;
 }
 
@@ -1436,6 +1452,22 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--text-dark);
+}
+
+.additional-links-order {
+  position: relative;
+  margin-right: 30px;
+}
+
+.additional-links-order::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: -15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--hover-border);
 }
 
 .additional-links a:focus,

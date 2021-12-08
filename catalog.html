@@ -13,6 +13,7 @@
 </head>
 
 <body class="page-body">
+
   <header class="main-header">
     <div class="main-header-top">
       <div class="container header-top-wrapper">
@@ -22,29 +23,47 @@
         <form class="search" action="https://echo.academy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
           <input class="search-field" type="text" name="search-field" id="search-field" placeholder="Поиск:">
+          <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044 17 15.586
+            15.586 17l-3.542-3.542A7.465 7.465 0 0 1 7.5 15 7.5 7.5 0 1 1 15 7.5c0 1.643-.542
+             3.24-1.542 4.544ZM7.5 2A5.506 5.506 0 0 0 2 7.5 5.506 5.506 0 0 0 7.5 13c3.032 0 5.5-2.468 5.5-5.5C13
+              4.467 10.532 2 7.5 2Z" fill="#fff"/></svg>
         </form>
-        <div class="user-links">
-          <a class="bookmark" href="#">Закладки: <span>0</span></a>
-          <a class="cart full-cart" href="#">Корзина: <span>10</span></a>
-          <a class="order" href="#">Оформить заказ</a>
-        </div>
+
+          <a class="user-link bookmark" href="#">Закладки: <span>0</span></a>
+          <a class="user-link cart full-cart" href="#">Корзина: <span>10</span></a>
+          <a class="user-link order" href="#">Оформить заказ</a>
+
       </div>
     </div>
     <div class="container">
       <div class="main-header-middle">
-        <p>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
+        <p class="description">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</p>
         <div class="header-contacts">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </div>
         <div class="user-box">
-          <div class="user-id">
-            <a href="#"><span>Равшан Джамшутович</span></a>
-            <a class="log-out" href="#"></a>
+          <div class="user-profile-wrapper">
+            <a class="user-profile" href="#">
+              <svg class="icon-user" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49
+                 5.49 0 0 0 1.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0
+                 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03
+                 14.9 0 18 0 18h20s.02-3.1-2.12-3.83Z" fill="#C5C5C5"/>
+              </svg>
+              <span>Равшан Джамшутович</span>
+            </a>
+            <a class="log-out" href="#">
+              <svg class="icon-logout" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5 11.12 0v6h-6v5h6v6L20 8.5Z"
+                fill="#C5C5C5"/><path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0
+                 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84
+                  0-1-.68-1.01-1.06Z" fill="#C5C5C5"/>
+             </svg>
+            </a>
           </div>
             <ul class="additional-links">
               <li>
-                <a href="#">Мои заказы</a>
+                <a class="additional-links-order" href="#">Мои заказы</a>
               </li>
               <li>
                 <a href="#">Личный кабинет</a>
