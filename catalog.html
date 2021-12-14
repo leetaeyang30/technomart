@@ -22,7 +22,7 @@
         </a>
         <form class="search" action="https://echo.academy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-          <input class="search-field" type="text" name="search-field" id="search-field" placeholder="Поиск:">
+          <input class="search-field" type="search" name="search-field" id="search-field" placeholder="Поиск:">
           <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044 17 15.586
             15.586 17l-3.542-3.542A7.465 7.465 0 0 1 7.5 15 7.5 7.5 0 1 1 15 7.5c0 1.643-.542
@@ -130,7 +130,7 @@
         <h2 class="sub-title">Фильтр:</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filter-item">
-            <legend class="filter-price-title">Цена:</legend>
+            <legend class="price-headline">Цена:</legend>
             <div class="range-filter">
               <div class="range-panel">
                 <div class="scale">
@@ -146,14 +146,14 @@
             </div>
             <div class="price-controls">
               <label class="visually-hidden" for="filter-price-min">Минимальная цена</label>
-              <input class="filter-price-min" type="text" name="min-price" id="filter-price-min" placeholder="0">
+              <input class="filter-price-min" type="number" name="min-price" id="filter-price-min" placeholder="0">
               <span>—</span>
               <label class="visually-hidden" for="filter-price-max">Максимальная цена</label>
-              <input class="filter-price-max" type="text" name="max-price" id="filter-price-max" placeholder="30000">
+              <input class="filter-price-max" type="number" name="max-price" id="filter-price-max" placeholder="30000">
             </div>
           </fieldset>
           <fieldset class="filter-item">
-            <legend>Производители:</legend>
+            <legend class="manufacturers-headline">Производители:</legend>
             <ul class="manufacturers-list">
               <li>
                 <input class="filter-checkbox visually-hidden" type="checkbox" checked name="manufacturers[]"
@@ -183,7 +183,7 @@
             </ul>
           </fieldset>
           <fieldset class="filter-item">
-            <legend>Питание:</legend>
+            <legend class="battery-headline">Питание:</legend>
             <ul class="battery-list">
               <li>
                 <input class="filter-radio visually-hidden" type="radio" checked name="supply" id="battery">
@@ -404,7 +404,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer-top">
-        <a class="logo footer-logo" href="#">
+        <a class="logo footer-logo" href="index.html">
           <img src="img/icons/logo-technomart.svg" width="220" height="68" alt="Буквенный логотип магазина Техномарт.">
         </a>
         <ul class="footer-menu-list">
