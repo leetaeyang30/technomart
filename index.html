@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -335,9 +335,9 @@
             <a class="footer-menu-item" href="#">Контакты</a>
           </li>
         </ul>
-        <p class="footer-top-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br><a class="footer-tel"
-            href="tel:+78005558628">+7 800
-            555-86-28</a></p>
+        <p class="footer-top-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
+          <a class="footer-tel" href="tel:+78005558628">+7 800 555-86-28</a>
+        </p>
         <ul class="sub-menu-list">
           <li>
             <a class="sub-menu-item" href="index.html">Материалы</a>
@@ -384,32 +384,48 @@
     </div>
   </footer>
 
-  <section class="modal modal-contact">
+  <section class="modal modal-contact hidden">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="contact-form" action="https://echo.academy.ru" method="post">
-      <label for="contact-name">Ваше имя:</label>
-      <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
-      <label for="contact-email">Ваш e-mail:</label>
-      <input type="text" name="email" id="contact-email" placeholder="email@example.com">
-      <label for="contact-comment">Текст письма:</label>
-      <textarea name="comment" id="contact-comment" placeholder="В свободной форме"></textarea>
-      <button class="button submit" type="submit">Отправить</button>
+      <div class="modal-contact-grid">
+        <p class="contact-name">
+          <label for="contact-name">Ваше имя:</label>
+          <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
+        </p>
+        <p class="contact-email">
+          <label for="contact-email">Ваш e-mail:</label>
+          <input type="text" name="email" id="contact-email" placeholder="email@example.com">
+        </p>
+        <p class="contact-comment">
+          <label for="contact-comment">Текст письма:</label>
+          <textarea name="comment" id="contact-comment" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <div class="modal-buttons">
+        <button class="button submit" type="submit">Отправить</button>
+      </div>
     </form>
-    <button class="button-close" type="button">Закрыть</button>
+    <button class="button-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal-map hidden">
     <h2 class="visually-hidden">Местоположение офиса</h2>
-    <img src="img/map-large.png" width="943" height="449" alt="Карта с местонахождением офиса.">
-    <button class="button-close" type="button">Закрыть</button>
+    <img class="hidden" src="img/map-large.png" width="943" height="449" alt="Карта с местонахождением офиса.">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.411263332934!2d30.31631455822666!3d59.96826733786315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1639913745572!5m2!1sru!2sru" width="943" height="449" allowfullscreen=""
+      loading="lazy"></iframe>
+    <button class="button-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-cart">
-    <h2 class="visually-hidden">Добавлено в корзину</h2>
-    <p>Товар добавлен в корзину!</p>
-    <button class="button-close" type="button">Закрыть</button>
-    <a class="button" href="#">Оформить заказ</a>
-    <button class="button-continue" type="button">Продолжить покупки</button>
+  <section class="modal modal-cart hidden">
+    <div class="modal-cart-top">
+      <h2 class="visually-hidden">Добавлено в корзину</h2>
+      <p>Товар добавлен в корзину!</p>
+      <button class="button-close" type="button" aria-label="Закрыть"></button>
+    </div>
+    <div class="modal-buttons">
+      <a class="button" href="#">Оформить заказ</a>
+      <button class="button-continue" type="button">Продолжить покупки</button>
+    </div>
   </section>
 </body>
 

@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -392,7 +392,7 @@
     <section class="note">
       <div class="container">
         <h2 class="headline">Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+        <p>Перфоратор &mdash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
           кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные
           модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>В ассортиментном ряду есть выбор
           «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
@@ -473,12 +473,16 @@
     </div>
   </footer>
 
-  <section class="modal modal-cart">
-    <h2 class="visually-hidden">Добавлено в корзину</h2>
-    <p>Товар добавлен в корзину!</p>
-    <button class="button-close" type="button">Закрыть</button>
-    <a class="button" href="#">Оформить заказ</a>
-    <button class="button-continue" type="button">Продолжить покупки</button>
+  <section class="modal modal-cart hidden">
+    <div class="modal-cart-top">
+      <h2 class="visually-hidden">Добавлено в корзину</h2>
+      <p>Товар добавлен в корзину!</p>
+      <button class="button-close" type="button" aria-label="Закрыть"></button>
+    </div>
+    <div class="modal-buttons">
+      <a class="button" href="#">Оформить заказ</a>
+      <button class="button-continue" type="button">Продолжить покупки</button>
+    </div>
   </section>
 
 </body>
