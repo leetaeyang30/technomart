@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -23,11 +23,12 @@
         <form class="search" action="https://echo.academy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
           <input class="search-field" type="search" name="search-field" id="search-field" placeholder="Поиск:">
-          <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-icon" aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044 17 15.586
             15.586 17l-3.542-3.542A7.465 7.465 0 0 1 7.5 15 7.5 7.5 0 1 1 15 7.5c0 1.643-.542
              3.24-1.542 4.544ZM7.5 2A5.506 5.506 0 0 0 2 7.5 5.506 5.506 0 0 0 7.5 13c3.032 0 5.5-2.468 5.5-5.5C13
               4.467 10.532 2 7.5 2Z" fill="#fff" /></svg>
+          <button class="visually-hidden" type="submit" aria-label="Искать"></button>
         </form>
         <a class="user-link bookmark" href="#">Закладки: <span>0</span></a>
         <a class="user-link cart" href="#">Корзина: <span>0</span></a>
@@ -43,7 +44,7 @@
         </div>
         <div class="user-id">
           <a class="user-id-login" href="#">
-            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
               <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619
               13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219
@@ -148,7 +149,7 @@
             <s class="old-price">32500 Р.</s>
             <p class="current-price">25500 Р.</p>
             <div class="card-action-buttons">
-              <a class="buy" href="#">Купить</a>
+              <a class="buy" href="#" aria-label="Добавить перфоратор BOSCH BFG 9000 в корзину.">Купить</a>
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
@@ -164,7 +165,7 @@
             <s class="old-price">22500 Р.</s>
             <p class="current-price">15500 Р.</p>
             <div class="card-action-buttons">
-              <a class="buy" href="#">Купить</a>
+              <a class="buy" href="#" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину.">Купить</a>
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
@@ -179,7 +180,7 @@
             <s class="old-price">30500 Р.</s>
             <p class="current-price">25500 Р.</p>
             <div class="card-action-buttons">
-              <a class="buy" href="#">Купить</a>
+              <a class="buy" href="#" aria-label="Добавить перфоратор BOSCH BFG 9600 в корзину.">Купить</a>
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
@@ -195,7 +196,7 @@
             <s class="old-price">22500 Р.</s>
             <p class="current-price">12500 Р.</p>
             <div class="card-action-buttons">
-              <a class="buy" href="#">Купить</a>
+              <a class="buy" href="#" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину.">Купить</a>
               <a class="add-mark" href="#">В закладки</a>
             </div>
           </li>
@@ -386,7 +387,7 @@
 
   <section class="modal modal-contact hidden">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="contact-form" action="https://echo.academy.ru" method="post">
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-contact-grid">
         <p class="contact-name">
           <label for="contact-name">Ваше имя:</label>
@@ -398,14 +399,14 @@
         </p>
         <p class="contact-comment">
           <label for="contact-comment">Текст письма:</label>
-          <textarea name="comment" id="contact-comment" placeholder="В свободной форме"></textarea>
+          <textarea name="letter" id="contact-comment" placeholder="В свободной форме"></textarea>
         </p>
       </div>
       <div class="modal-buttons">
         <button class="button submit" type="submit">Отправить</button>
       </div>
     </form>
-    <button class="button-close" type="button" aria-label="Закрыть"></button>
+    <button class="button-close" type="button" aria-label="Закрыть форму."></button>
   </section>
 
   <section class="modal modal-map hidden">
@@ -413,14 +414,14 @@
     <img class="hidden" src="img/map-large.png" width="943" height="449" alt="Карта с местонахождением офиса.">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.411263332934!2d30.31631455822666!3d59.96826733786315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1639913745572!5m2!1sru!2sru" width="943" height="449" allowfullscreen=""
       loading="lazy"></iframe>
-    <button class="button-close" type="button" aria-label="Закрыть"></button>
+    <button class="button-close" type="button" aria-label="Закрыть карту."></button>
   </section>
 
   <section class="modal modal-cart hidden">
     <div class="modal-cart-top">
       <h2 class="visually-hidden">Добавлено в корзину</h2>
       <p>Товар добавлен в корзину!</p>
-      <button class="button-close" type="button" aria-label="Закрыть"></button>
+      <button class="button-close" type="button" aria-label="Закрыть всплывающее окно."></button>
     </div>
     <div class="modal-buttons">
       <a class="button" href="#">Оформить заказ</a>

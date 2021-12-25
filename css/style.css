@@ -2190,29 +2190,32 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-.filter-checkbox:hover+label::before,
-.filter-checkbox:checked:hover+label::after {
+.filter-checkbox:hover + label::before,
+.filter-checkbox:checked:hover + label::after,
+.filter-radio:checked:hover + label::after {
   background-color: var(--toggle-color);
+}
+
+.filter-checkbox:focus + label::before,
+.filter-checkbox:checked:focus + label::after,
+.filter-radio:checked:focus + label::after {
+  background-color: var(--hover-icon);
+}
+
+.filter-radio:focus + label::before {
+  border-color: var(--hover-icon);
+}
+
+.filter-radio:hover + label::before {
+  border-color: var(--toggle-color);
 }
 
 .filter-checkbox:disabled+label::before,
 .filter-checkbox:disabled+label::after,
-.filter-checkbox:disabled+label {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.filter-radio:hover+label::before {
-  border-color: var(--toggle-color);
-}
-
-.filter-radio:checked:hover+label::after {
-  background-color: var(--toggle-color);
-}
-
-.filter-radio:disabled+label::before,
-.filter-radio:disabled+label::after,
-.filter-radio:disabled+label {
+.filter-checkbox:disabled+label,
+.filter-radio:disabled + label::before,
+.filter-radio:disabled + label::after,
+.filter-radio:disabled + label  {
   opacity: 0.4;
   cursor: default;
 }
@@ -2342,7 +2345,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .sorting-item {
   color: var(--text-black);
-  opacity: 0.3;
+  opacity: 0.4;
   border-bottom: 1px dotted var(--accent-color);
 }
 
