@@ -948,13 +948,16 @@ img {
   object-fit: contain;
 }
 
-.good-item h3 {
+.good-item-title {
   margin: 0 17px 8px;
   padding: 0;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+}
+
+.good-item-title a {
   color: var(--text-black);
 }
 
@@ -1005,12 +1008,12 @@ img {
           box-shadow: 0px 4px 20px var(--text-black-15);
 }
 
-.good-item:focus .product-image,
+.good-item:focus-within .product-image,
 .good-item:hover .product-image {
   display: none;
 }
 
-.good-item:focus .card-action-buttons,
+.good-item:focus-within .card-action-buttons,
 .good-item:hover .card-action-buttons {
   display: block;
 }
@@ -1335,7 +1338,8 @@ img {
   margin-bottom: 25px;
 }
 
-.contacts-mini-map:hover {
+.contacts-mini-map:hover,
+.contacts-mini-map:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -1636,9 +1640,12 @@ img {
   line-height: 24px;
 }
 
-.contact-form input[placeholder],
-.contact-form textarea {
+.contact-form input[placeholder] {
   padding: 7px 8px 7px 12px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1649,6 +1656,10 @@ img {
   width: 204px;
   padding:0;
   margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--text-black);
   border: 2px solid var(--click-user);
   border-radius: 2px;
 }
@@ -1656,7 +1667,12 @@ img {
 .contact-form textarea {
   width: 452px;
   min-height: 114px;
+  padding: 7px 8px 7px 12px;
   margin-bottom: 37px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--text-black);
   border: 2px solid var(--click-user);
   border-radius: 2px;
 }
@@ -1770,6 +1786,10 @@ img {
   width: 299px;
 }
 
+.icon-user {
+  padding: 3px;
+}
+
 .user-profile-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1784,6 +1804,11 @@ img {
   font-size: 21px;
   line-height: 21px;
   background: var(--text-white);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
 }
 
 .user-profile span {
@@ -1875,7 +1900,7 @@ img {
   color: var(--text-black);
 }
 
-.breadcrumps-item:not(.breadcrumps-item-main) {
+.breadcrumps li:not(:first-child) {
   position: relative;
   padding-left: 42px;
 }
@@ -1886,7 +1911,7 @@ img {
   background: url(../img/icons/icon-home.svg) center no-repeat;
 }
 
-.breadcrumps-item:not(.breadcrumps-item-main)::before {
+.breadcrumps li:not(:first-child)::before {
   position: absolute;
   content: "";
   width: 8px;
@@ -2078,6 +2103,8 @@ input[type="number"]::-webkit-inner-spin-button {
   color: var(--text-black);
 }
 
+.filter-price-min,
+.filter-price-max,
 .filter-price-min::placeholder,
 .filter-price-max::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -2192,22 +2219,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .filter-checkbox:hover + label::before,
 .filter-checkbox:checked:hover + label::after,
-.filter-radio:checked:hover + label::after {
-  background-color: var(--toggle-color);
-}
-
 .filter-checkbox:focus + label::before,
-.filter-checkbox:checked:focus + label::after,
-.filter-radio:checked:focus + label::after {
-  background-color: var(--hover-icon);
-}
-
-.filter-radio:focus + label::before {
-  border-color: var(--hover-icon);
-}
-
-.filter-radio:hover + label::before {
-  border-color: var(--toggle-color);
+.filter-checkbox:checked:focus + label::after {
+  background-color: var(--toggle-color);
 }
 
 .filter-checkbox:disabled+label::before,
@@ -2215,9 +2229,19 @@ input[type="number"]::-webkit-inner-spin-button {
 .filter-checkbox:disabled+label,
 .filter-radio:disabled + label::before,
 .filter-radio:disabled + label::after,
-.filter-radio:disabled + label  {
+.filter-radio:disabled + label {
   opacity: 0.4;
   cursor: default;
+}
+
+.filter-radio:focus + label::before,
+.filter-radio:hover + label::before {
+  border-color: var(--toggle-color);
+}
+
+.filter-radio:checked:focus + label::after,
+.filter-radio:checked:hover + label::after {
+  background-color: var(--toggle-color);
 }
 
 /* submit*/
