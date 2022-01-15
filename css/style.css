@@ -208,6 +208,10 @@ img {
   box-shadow: 0 5px var(--click-accent);
 }
 
+.logo[href]:hover {
+  background: var(--hover-accent);
+}
+
 .logo[href]:active {
   background: var(--click-accent);
   -webkit-box-shadow: 0 5px var(--border-color-active);
@@ -416,6 +420,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -499,7 +506,9 @@ img {
 
 .user-id-signup {
   display: block;
-  padding: 12px 24px;
+  width: 130px;
+  padding: 12px 10px;
+  text-align: center;
   background: var(--text-white);
   color: var(--text-black);
 }
@@ -774,7 +783,7 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 620px;
-  height: 266px;
+  min-height: 266px;
 }
 
 .gallery-slider-title {
